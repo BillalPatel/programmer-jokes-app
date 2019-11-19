@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      emptyState: true,
+      loading: false,
       resultsData: []
     }
   }
@@ -32,23 +32,22 @@ class App extends Component {
       .then(res => {
         const result = res.data;
         this.setState({
-          isEmptyState: false,
+          loading: true,
           resultsData: result
         })
       })
   }
 
   render() {
-    const { resultsData } = this.state;
-    const newJoke = resultsData;
-    
+    const { resultsData, loading } = this.state;
+
     return (
       <Fragment>
         <PageHeader />
         <DividerLine />
         <JokeButton getJoke={ this.onJokeButtonClick } />
-        <JokeMessage jokeline={ newJoke } />
-        <LoadingAlert />
+        <JokeMessage jokeline={ resultsData } />
+        <LoadingAlert loader={ loading }/>
       </Fragment>
     );
   }
