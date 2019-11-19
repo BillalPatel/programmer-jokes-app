@@ -12,4 +12,4 @@ const JokeButton = () => {
 	)
 }
 
-export default JokeButton;
+export default JokeButton
