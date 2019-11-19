@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import axios from 'axios';
 import logo from './logo.svg'
 import './App.css'
 import PageHeader from './PageHeader'
@@ -11,19 +12,42 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      result: []
+      loading: false,
+      resultsData: []
     }
   }
 
-  render() {
+  componentDidMount() {
     
+  }
+
+  reset() {
+      this.setState({
+          resultsData: []
+      })
+  }
+
+  onJokeButtonClick = () => {
+    axios.get('https://sv443.net/jokeapi/category/programming')
+      .then(res => {
+        const result = res.data;
+        this.setState({
+          loading: true,
+          resultsData: result
+        })
+      })
+  }
+
+  render() {
+    const { resultsData, loading } = this.state;
+
     return (
       <Fragment>
         <PageHeader />
         <DividerLine />
-        <JokeButton />
-        <JokeMessage />
-        <LoadingAlert />
+        <JokeButton getJoke={ this.onJokeButtonClick } />
+        <JokeMessage jokeline={ resultsData } />
+        <LoadingAlert loader={ loading }/>
       </Fragment>
     );
   }
