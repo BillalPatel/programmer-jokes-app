@@ -12,8 +12,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      emptyState: true,
       resultsData: []
     }
+  }
+
+  componentDidMount() {
+    
   }
 
   reset() {
@@ -23,14 +28,11 @@ class App extends Component {
   }
 
   onJokeButtonClick = () => {
-    // const { joke } = this.state;
-    // this.setState({
-    //   joke: 
-    // }
     axios.get('https://sv443.net/jokeapi/category/programming')
       .then(res => {
         const result = res.data;
         this.setState({
+          isEmptyState: false,
           resultsData: result
         })
       })
@@ -38,14 +40,14 @@ class App extends Component {
 
   render() {
     const { resultsData } = this.state;
-    const newJoke = resultsData.joke;
+    const newJoke = resultsData;
     
     return (
       <Fragment>
         <PageHeader />
         <DividerLine />
         <JokeButton getJoke={ this.onJokeButtonClick } />
-        <JokeMessage joke={ newJoke } />
+        <JokeMessage jokeline={ newJoke } />
         <LoadingAlert />
       </Fragment>
     );
