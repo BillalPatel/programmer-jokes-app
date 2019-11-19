@@ -1,3 +1,5 @@
+## Data sourced from: https://sv443.net/jokeapi?ref=apilist.fun
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
