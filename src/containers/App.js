@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios';
-import logo from './logo.svg'
 import './App.css'
-import PageHeader from './PageHeader'
-import DividerLine from './DividerLine'
-import JokeButton from './JokeButton'
-import JokeMessage from './JokeMessage'
-import LoadingAlert from './LoadingAlert'
+
+import PageHeader from '../components/PageHeader'
+import DividerLine from '../components/DividerLine'
+import JokeButton from '../components/JokeButton'
+import JokeMessage from '../components/JokeMessage'
+import LoadingAlert from '../components/LoadingAlert'
 
 class App extends Component {
   constructor() {
