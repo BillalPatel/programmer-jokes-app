@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react'
-import axios from 'axios';
+import axios from 'axios'
 import './App.css'
 
 import PageHeader from '../components/PageHeader'
 import DividerLine from '../components/DividerLine'
 import JokeButton from '../components/JokeButton'
 import JokeMessage from '../components/JokeMessage'
-import LoadingAlert from '../components/LoadingAlert'
 
 class App extends Component {
   constructor() {
@@ -39,17 +38,16 @@ class App extends Component {
   }
 
   render() {
-    const { resultsData, loading } = this.state;
+    const { resultsData, loading } = this.state
 
     return (
       <Fragment>
         <PageHeader />
         <DividerLine />
         <JokeButton getJoke={ this.onJokeButtonClick } />
-        <JokeMessage jokeline={ resultsData } />
-        <LoadingAlert loader={ loading }/>
+        <JokeMessage jokeline={ resultsData } loader={ loading } />
       </Fragment>
-    );
+    )
   }
 }
 
