@@ -4,7 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 const PageHeader = () => {
 	return (
-    	<Header as='h1'>PJ</Header>
+    	<Header as='h1'>Programmer Jokes</Header>
 	)
 }
 
