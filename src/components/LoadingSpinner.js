@@ -3,7 +3,9 @@ import 'semantic-ui-css/semantic.min.css'
 import LoadingAlert from './LoadingAlert'
 
 const LoadingSpinner = () => { 
-	return (<LoadingAlert /> )
+	return (
+		<LoadingAlert /> 
+	)
 };
 
 export default LoadingSpinner
