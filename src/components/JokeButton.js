@@ -1,15 +1,11 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
+import React from 'react';
 
-const JokeButton = ({ getJoke }) => {
+const JokeButton = (props) => {
 	return (
-		<div>
-			<Button content='Primary' className="ui primary button" onClick={ getJoke }>
-				Click Here!
-			</Button>
+		<div class="flex items-center justify-center pa4">
+			<a className="f5 no-underline black bg-animate hover-bg-black hover-white inline-flex items-center pa3 ba border-box" style={{cursor: "pointer"}} onClick={ props.getJoke }> GET JOKE </a>
 		</div>
 	)
 }
 
-export default JokeButton
+export default JokeButton;

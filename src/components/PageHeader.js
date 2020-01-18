@@ -1,11 +1,9 @@
-import React from 'react'
-import { Header } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
+import React from 'react';
 
 const PageHeader = () => {
 	return (
-    	<Header as='h1'>Programmer Jokes</Header>
+    	<h1 className="f3 f2-m f-subheadline-l measure lh-title fw1 mt0 tc">Programmer Jokes</h1>
 	)
 }
 
-export default PageHeader
+export default PageHeader;
