@@ -14,6 +14,7 @@ const App = () => {
 
   const onJokeButtonClick = async () => {
     try {
+      setDisplayJoke(false);
       await axios.get('https://sv443.net/jokeapi/category/programming')
         .then(setLoading(true))
         .then(res => {
@@ -21,11 +22,11 @@ const App = () => {
             setResultsData(result);
             setLoading(false);
             setDisplayJoke(true);
-        })
+        });
     } catch(err) {
       console.log(err);
-    }
-  }
+    };
+  };
 
     return (
       <>
