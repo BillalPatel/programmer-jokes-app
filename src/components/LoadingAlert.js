@@ -1,11 +1,9 @@
-import React from 'react'
-import { Loader } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
+import React from 'react';
 
 const LoadingAlert = () => {
-	return (
-		<Loader active inline />
-	)
-}
+  return (
+    <h1>Loading..</h1>
+  );
+};
 
-export default LoadingAlert
+export default LoadingAlert;
