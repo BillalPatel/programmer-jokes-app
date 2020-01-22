@@ -1,8 +1,9 @@
 import React from 'react';
+import LoaderIcon from "react-loader-icon";
 
 const LoadingAlert = () => {
   return (
-    <h1>Loading..</h1>
+    <LoaderIcon size={100} />
   );
 };
 
