@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-import PageHeader from '../components/PageHeader'
-import DividerLine from '../components/DividerLine'
-import JokeButton from '../components/JokeButton'
-import JokeMessage from '../components/JokeMessage'
-import LoadingSpinner from '../components/LoadingSpinner'
-import './App.css'
-
+import PageHeader from '../components/PageHeader';
+import JokeButton from '../components/JokeButton';
+import JokeMessage from '../components/JokeMessage';
+import LoadingAlert from '../components/LoadingAlert';
+import './App.css';
 
 const App = () => {
   const [loading, setLoading] = useState(false)
@@ -32,16 +30,15 @@ const App = () => {
     return (
       <>
         <PageHeader />
-        <DividerLine />
         {loading && 
-          <LoadingSpinner />
+          <LoadingAlert />
         }
         {displayJoke && 
           <JokeMessage jokeline={ resultsData } />
         }
         <JokeButton getJoke={ onJokeButtonClick } />
       </>
-    )
-}
+    );
+};
 
-export default App
+export default App;
