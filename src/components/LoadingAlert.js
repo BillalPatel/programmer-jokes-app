@@ -1,5 +1,5 @@
 import React from 'react';
-import LoaderIcon from "react-loader-icon";
+import LoaderIcon from 'react-loader-icon';
 
 const LoadingAlert = () => {
   return (
