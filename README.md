@@ -6,3 +6,4 @@ Used as a practice for ReactJS with API requests to a [public API](https://sv443
 npm i
 npm run start
 ```
+![](README_GIF.gif)
