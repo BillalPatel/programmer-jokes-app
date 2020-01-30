@@ -1,4 +1,4 @@
-## Description
+## Programmer Jokes App
 Used as a practice for ReactJS with API requests to a [public API](https://sv443.net/jokeapi)
 
 #### Usage
